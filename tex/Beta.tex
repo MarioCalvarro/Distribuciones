@@ -1,46 +1,35 @@
 \section{Beta}
 \label{sec:beta}
-Distribución que vale $1$ en un solo punto $h$.
+Distribución que %TODO.
+\[
+\boxed{\beta\left( \alpha, \beta \right)}
+\]
 
 \subsection{Función de masa}
-La función de masa de la distribución es:
+La función de densidad de la distribución es:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
+f_X \left( x \right) = \frac{x^{\alpha - 1} \left( 1 - x \right)^{\beta - 1}}{B\left( \alpha, \beta \right)}
 \]
+donde $B\left( \alpha, \beta \right) = \frac{\Gamma\left( \alpha \right)\Gamma\left( \beta \right)}{\Gamma\left( \alpha + \beta \right)}$.
 
 \subsection{Función de distribución}
 La función de distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+F_X\left( x \right) = I_x\left( \alpha, \beta \right)
 \]
+que es la \textit{regularización incompleta de la función beta}.%TODO
 
 \subsection{Momentos}
 
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
-\]
-y un momento genérico: 
-\[
-    E\left[ X^k \right] = h^k
+    E\left[ X \right] = \frac{\alpha}{\alpha + \beta}
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
-\]
-
-\subsection{Función característica}
-La función característica de la distribución es:
-\[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+    V\left[ X \right] = \frac{\alpha \beta}{\left( \alpha + \beta \right)^2 \left( \alpha + \beta + 1 \right)}
 \]
 
 %\subsection{Otras características de interés}

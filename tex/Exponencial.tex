@@ -1,23 +1,21 @@
 \section{Exponencial}
 \label{sec:exponencial}
-Distribución que vale $1$ en un solo punto $h$.
+Distribución que mide la probabilidad que una cantidad $x$ de tiempo haya pasado entre 
+dos eventos de una distribución Poisson $\lambda$.
+\[
+\boxed{\exp\left( a \right)}
+\]
 
 \subsection{Función de masa}
-La función de masa de la distribución es:
+La función de densidad de la distribución es:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
+f_X \left( x \right) = \lambda e^{-\lambda x} \cdot I_{\left( 0, +\infty \right)}\left( x \right)
 \]
 
 \subsection{Función de distribución}
 La función de distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+F_X\left( x \right) = 1 - e^{-\lambda x} \cdot I_{\left( 0, +\infty \right)}\left( x \right)
 \]
 
 \subsection{Momentos}
@@ -25,22 +23,29 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
+    E\left[ X \right] = \lambda^{-1}
 \]
 y un momento genérico: 
 \[
-    E\left[ X^k \right] = h^k
+    E\left[ X^k \right] = \frac{k!}{\lambda^k}
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
+    V\left[ X \right] = \lambda^{-2}
 \]
 
 \subsection{Función característica}
 La función característica de la distribución es:
 \[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+\varphi\left( t \right) = \frac{\lambda}{\lambda - it}
 \]
 
-%\subsection{Otras características de interés}
+\subsection{Otras características de interés}
+\begin{itemize}
+    \item $\exp\left( a \right) \equiv \gamma\left( 1, a \right)$
+    \item Si tenemos $X_i \sim \exp\left( a \right)$ para $i \in \left\{ 1, \ldots, n \right\}$. Entonces:
+    \[
+    \sum_{i=1}^{n} X_i \sim \exp \left( a \right) 
+    \]
+\end{itemize}

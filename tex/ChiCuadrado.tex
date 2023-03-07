@@ -1,23 +1,21 @@
 \section{Chi Cuadrado}
 \label{sec:chi_cuadrado}
-Distribución que vale $1$ en un solo punto $h$.
+Sean $X_i \sim N\left( 0, 1 \right)$ con $i \in \left\{ 1, \ldots, n \right\}$ entonces definimos:
+\[
+\chi^2\left( n \right) \sim \sum_{i=1}^{n} X_i
+\]
+como distribución \textbf{chi cuadrado de Pearson} con $n$ grados de libertad.
 
 \subsection{Función de masa}
-La función de masa de la distribución es:
+La función de densidad de la distribución es:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
+f_X \left( x \right) = \frac{1}{2^{n/2}}\Gamma\left( \frac{n}{2} \right)\exp\left\{ -\frac{x}{2} \right\} x^{\frac{n}{2} - 1},\ x > 0
 \]
 
 \subsection{Función de distribución}
 La función de distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+F_X\left( x \right) = \frac{1}{\Gamma\left( n / 2 \right)}\gamma\left( \frac{n}{2}, \frac{x}{2} \right)
 \]
 
 \subsection{Momentos}
@@ -25,7 +23,7 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
+    E\left[ X \right] = n
 \]
 y un momento genérico: 
 \[
@@ -34,13 +32,23 @@ y un momento genérico:
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
+    V\left[ X \right] = 2n
 \]
 
 \subsection{Función característica}
 La función característica de la distribución es:
 \[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+\varphi\left( t \right) = \left( 1 - 2it \right)^{-n/2}
 \]
 
-%\subsection{Otras características de interés}
+\subsection{Otras características de interés}
+\begin{itemize}
+    \item Si tenemos $Y_1 \sim \chi^2_{n_1}$ y $Y_2 \sim \chi^2_{n_2}$. Entonces:
+    \[
+    Y_1 + Y_2 \sim \chi^2_{n_1 + n_2}
+    \]
+    \item Si tenemos $X \sim \chi^2_n$ y tomamos una $\mas\left( k \right)$. Entonces:
+    \[
+    \overline{X} \sim \gamma\left( nk, \frac{k}{2} \right)
+    \]
+\end{itemize}

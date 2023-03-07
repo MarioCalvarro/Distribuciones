@@ -1,23 +1,20 @@
 \section{Normal}
 \label{sec:normal}
-Distribución que vale $1$ en un solo punto $h$.
+Distribución de media $\mu$ y desviación típica $\sigma$:
+\[
+\boxed{N\left( \mu, \sigma \right)}
+\]
 
 \subsection{Función de masa}
-La función de masa de la distribución es:
+La función de densidad de la distribución es:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
+f_X \left( x \right) = \frac{1}{\sigma \sqrt{2 \pi}} \cdot \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\}
 \]
 
 \subsection{Función de distribución}
 La función de distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+F_X\left( x \right) = \frac{1}{2} \left[ 1 + \erf\left( \frac{x - \mu}{\sigma \sqrt{2}} \right) \right]
 \]
 
 \subsection{Momentos}
@@ -25,22 +22,29 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
-\]
-y un momento genérico: 
-\[
-    E\left[ X^k \right] = h^k
+    E\left[ X \right] = \mu
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
+    V\left[ X \right] = \sigma^2
 \]
 
 \subsection{Función característica}
 La función característica de la distribución es:
 \[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+\varphi\left( t \right) = \exp\left\{ it \mu - \frac{\sigma^2 t^2}{2} \right\}
 \]
 
-%\subsection{Otras características de interés}
+\subsection{Otras características de interés}
+\begin{itemize}
+    \item Es simétrica respecto de $x = \mu$.
+    \item Si tenemos $X \sim N\left( \mu, \sigma \right)$ e $Y = aX + b \Rightarrow$
+    \[
+    Y \sim N\left( a \mu + b, \lvert a \rvert \sigma \right)
+    \]
+    \item Si tenemos $X_i \sim N\left( \mu_i, \sigma_i \right)$ para $i \in \left\{ 1, \ldots, n \right\}$. Entonces: 
+    \[
+    \sum_{i=1}^{n} X_i \sim N\left( \sum_{i=1}^{n} \mu_i, \sqrt{\sum_{i=1}^{n} \sigma_i} \right)  
+    \]
+\end{itemize}

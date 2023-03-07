@@ -1,23 +1,15 @@
 \section{T-Student}
 \label{sec:t_student}
-Distribución que vale $1$ en un solo punto $h$.
-
-\subsection{Función de masa}
-La función de masa de la distribución es:
+Sean $Z \sim N\left( 0, 1 \right)$ e $Y \sim \chi^2_n$ definimos entonces:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
+\boxed{T \sim \frac{Z}{\sqrt{\faktor{Y}{n}}}}
 \]
+como distribución \textbf{t-Student} con $n$ grados de libertad.
 
-\subsection{Función de distribución}
-La función de distribución es:
+\subsection{Función de densidad}
+La función de densidad de la distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+f_T \left( x \right) = \frac{1}{\sqrt{n \pi}}\frac{\Gamma\left( \frac{n + 1}{2} \right)}{\Gamma\left( \frac{n}{2} \right)} \left( 1 + \frac{x^2}{n} \right)^{\frac{-n+1}{2}}
 \]
 
 \subsection{Momentos}
@@ -25,22 +17,12 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
-\]
-y un momento genérico: 
-\[
-    E\left[ X^k \right] = h^k
+    E\left[ X \right] = 0
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
-\]
-
-\subsection{Función característica}
-La función característica de la distribución es:
-\[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+    V\left[ X \right] = \frac{n}{n-2}
 \]
 
 %\subsection{Otras características de interés}

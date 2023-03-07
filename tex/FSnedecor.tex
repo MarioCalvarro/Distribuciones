@@ -1,23 +1,8 @@
 \section{F-Snedecor}
 \label{sec:f_snedecor}
-Distribución que vale $1$ en un solo punto $h$.
-
-\subsection{Función de masa}
-La función de masa de la distribución es:
+Sean $Y_n \sim \chi^2_n$ y $Y_m \sim \chi^2_m$ definimos entonces:
 \[
-p_X \left( x \right) = \begin{cases}
-    1, &x = h\\
-    0, &x \neq h
-\end{cases}
-\]
-
-\subsection{Función de distribución}
-La función de distribución es:
-\[
-F_X\left( x \right) = \begin{cases}
-    0, &x < h\\ 
-    1, &x \ge h
-\end{cases}
+\boxed{F \sim \frac{\faktor{Y_m}{m}}{\faktor{Y_n}{n}}}
 \]
 
 \subsection{Momentos}
@@ -25,22 +10,18 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
-\]
-y un momento genérico: 
-\[
-    E\left[ X^k \right] = h^k
+    E\left[ F \right] = \frac{m}{m - 2}
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
+    V\left[ X \right] = \frac{2 m \left( n + m - 2 \right)}{n \left( m - 2 \right)^2 \left( m - 4 \right)}
 \]
 
-\subsection{Función característica}
-La función característica de la distribución es:
-\[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
-\]
-
-%\subsection{Otras características de interés}
+\subsection{Otras características de interés}
+\begin{itemize}
+    \item Sea $F \sim F_{m, n}$ entonces:
+    \[
+    \faktor{1}{F} \sim F_{n, m}
+    \]
+\end{itemize}

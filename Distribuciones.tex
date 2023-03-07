@@ -1,0 +1,38 @@
+\documentclass[10pt,a4paper,openright]{book}
+
+%% Formateo del título del documento
+\title{\Huge Distribuciones Estadísticas}
+\author{Mario Calvarro Marines}
+\date{}
+
+\usepackage{style}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{tocdepth}{3}% para que salgan las subsubsecciones en el indice
+\tableofcontents
+
+
+\mainmatter
+\chapter{Distribuciones Discretas}
+\include{./tex/Degenerada}
+\include{./tex/Bernoulli}
+\include{./tex/Binomial}
+\include{./tex/Geométrica}
+\include{./tex/BinomialNegativa}
+\include{./tex/Poisson}
+
+\chapter{Distribuciones Continuas}
+\include{./tex/Uniforme}
+\include{./tex/Gamma}
+\include{./tex/Exponencial}
+\include{./tex/Beta}
+\include{./tex/Normal}
+
+\chapter{Distribuciones Normales}
+\include{./tex/ChiCuadrado}
+\include{./tex/TStudent}
+\include{./tex/FSnedecor}
+
+\end{document}

@@ -1,46 +1,39 @@
-\section{Degenerada}
-\label{sec:degenerada}
-Distribución que vale $1$ en un solo punto $h$.
+\section{Binomial}
+\label{sec:binomial}
+Distribución que mide la probabilidad de que $x$ experimentos, con probabilidad $p$, en $n$ intentos sean ``éxitos''. 
+\[
+Bin\left( n, p \right)
+\]
 
 \subsection{Función de masa}
 La función de masa de la distribución es:
 \[
-p_X \left( x \right) = \begin{cases}
-    1,\ x = h\\
-    0,\ x \neq h
-\end{cases}
+p_X \left( x \right) = \binom{n}{x} p^x \left( 1-p \right)^{n-x},\ x \in \left\{ 0, \ldots, n \right\}
 \]
 
 \subsection{Función de distribución}
 La función de distribución es:
 \[
-F_X\left( x \right) = \begin{cases}
-    0,\ x < h\\ 
-    1,\ x \ge h
-\end{cases}
+F_X\left( x \right) = \sum_{i=1}^{x} \binom{n}{i} p^i \left( 1-p \right)^{n-i}
 \]
 
 \subsection{Momentos}
 
 \subsubsection*{Respecto del origen}
-La \textbf{esperanza} será:
+La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = h
-\]
-y un momento genérico: 
-\[
-    E\left[ X^k \right] = h^k
+    E\left[ X \right] = np
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:
 \[
-    V\left[ X \right] = 0
+    V\left[ X \right] = np\left( 1-p \right)
 \]
 
 \subsection{Función característica}
 La función característica de la distribución es:
 \[
-\varphi\left( t \right) = \exp\left\{ ith \right\}
+\varphi\left( t \right) = \left( \left( 1-p \right) + p \exp\left\{ it \right\} \right)^n
 \]
 
 %\subsection{Otras características de interés}

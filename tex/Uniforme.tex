@@ -1,6 +1,7 @@
 \section{Uniforme}
 \label{sec:uniforme}
-Distribución que mide la probabilidad de un suceso que puede estar de forma arbitraria en un intervalo con las mismas posibilidades.
+Distribución que mide la probabilidad de un suceso que está en un punto de un
+intervalo de forma arbitraria con las mismas posibilidades.
 \[
 \boxed{U\left( a, b \right)}
 \]
@@ -17,7 +18,7 @@ La función de distribución es:
 F_X\left( x \right) = \begin{cases}
     0, &x < a\\ 
     \frac{x-a}{b-a}, & a \le x \le b\\ 
-    1, & x > b
+    1, & b < x
 \end{cases}
 \]
 
@@ -26,7 +27,7 @@ F_X\left( x \right) = \begin{cases}
 \subsubsection*{Respecto del origen}
 La \textbf{esperanza} es: 
 \[
-    E\left[ X \right] = \frac{1}{2} b+a
+    E\left[ X \right] = \frac{1}{2} \left( b+a \right)
 \]
 \subsubsection*{Respecto del centro}
 La \textbf{varianza} es:

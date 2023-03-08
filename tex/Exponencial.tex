@@ -3,7 +3,7 @@
 Distribución que mide la probabilidad que una cantidad $x$ de tiempo haya pasado entre 
 dos eventos de una distribución Poisson $\lambda$.
 \[
-\boxed{\exp\left( a \right)}
+\boxed{\exp\left( \lambda \right)}
 \]
 
 \subsection{Función de densidad}
@@ -44,8 +44,8 @@ La función característica de la distribución es:
 \subsection{Otras características de interés}
 \begin{itemize}
     \item $\exp\left( a \right) \equiv \gamma\left( 1, a \right)$
-    \item Si tenemos $X_i \sim \exp\left( a \right)$ para $i \in \left\{ 1, \ldots, n \right\}$. Entonces:
+    \item Si tenemos $X_i \sim \exp\left( \lambda \right)$ para $i \in \left\{ 1, \ldots, n \right\}$. Entonces:
     \[
-    \sum_{i=1}^{n} X_i \sim \exp \left( a \right) 
+    \sum_{i=1}^{n} X_i \sim \gamma \left( n, \lambda^{-1} \right) 
     \]
 \end{itemize}

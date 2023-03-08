@@ -1,6 +1,7 @@
 \section{Poisson}
 \label{sec:poisson}
-Distribución que mide la probabilidad de que ocurran $x$ eventos, que tienen una ``velocidad'' $\lambda$, en un determinado intervalo de tiempo.
+Distribución que mide la probabilidad de que ocurran $x$ eventos, que tienen un
+``ratio'' $\lambda$, en un determinado intervalo de tiempo.
 \[
 \boxed{P\left( \lambda \right)}
 \]
@@ -8,7 +9,7 @@ Distribución que mide la probabilidad de que ocurran $x$ eventos, que tienen un
 \subsection{Función de masa}
 La función de masa de la distribución es:
 \[
-p_X \left( x \right) = \frac{\lambda^x \exp\left\{ -\lambda \right\}}{x!},\ x \in \mathbb{N}_0
+p_X \left( x \right) = \frac{\lambda^x e^{-\lambda}}{x!},\ x \in \mathbb{N}_0
 \]
 
 \subsection{Función de distribución}
@@ -41,8 +42,10 @@ La función característica de la distribución es:
 \begin{itemize}
     \item Si tenemos $X_i \sim P\left( \lambda_i \right)$ para $i \in\left\{ 1, \ldots, n \right\}$. Entonces:
     \[
-    \sum_{i=1}^{n} X_i \sim P\left( \sum_{i=1}^{n} \lambda \right) 
+    \sum_{i=1}^{n} X_i \sim P\left( \sum_{i=1}^{n} \lambda_i \right) 
     \]
     %No del todo.
-    \item Si tenemos una binomial, con número de ``éxitos'' esperados se mantiene más o menos constante, y hacemos tender $n$, número de casos, a infinito, tenemos como resultado una Poisson con $\lambda = np$.
+    \item Si tenemos una binomial, con un número de ``éxitos'' esperados que se
+      mantiene más o menos constante, y hacemos tender $n$, número de casos, a
+      infinito, tenemos como resultado una Poisson con $\lambda = np$.
 \end{itemize}

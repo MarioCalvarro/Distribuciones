@@ -18,10 +18,18 @@ La \textbf{varianza} es:
     V\left[ X \right] = \frac{2 m \left( n + m - 2 \right)}{n \left( m - 2 \right)^2 \left( m - 4 \right)}
 \]
 
+\subsection{Teorema de Snedecor}%En realidad no sé de quién es
+Sean $X \sim N\left( \mu_1, \sigma_1 \right)$ y $Y \sim N\left( \mu_2, \sigma_2 \right)$ y tomamos $\mas\left( n \right)$ y $\mas\left( m \right)$ de cada una, respectivamente.
+Entonces:
+\[
+\boxed{\frac{S_1^2}{\sigma_1^2} \cdot \frac{\sigma_2^2}{S_2^2}\sim F_{n-1, m-1}}
+\]
+
 \subsection{Otras características de interés}
 \begin{itemize}
-    \item Sea $F \sim F_{m, n}$ entonces:
+    \item Sea $F \sim F_{n, m}$, entonces:
     \[
-    \faktor{1}{F} \sim F_{n, m}
+    \faktor{1}{F} \sim F_{m, n}
     \]
+    \item Tenemos que: $t_n \equiv F_{1, n}$.
 \end{itemize}

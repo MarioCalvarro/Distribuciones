@@ -2,7 +2,7 @@
 \label{sec:t_student}
 Sean $Z \sim N\left( 0, 1 \right)$ e $Y \sim \chi^2_n$ definimos entonces:
 \[
-\boxed{T \sim \frac{Z}{\sqrt{\faktor{Y}{n}}}}
+\boxed{t_{n-1} \sim \frac{Z}{\sqrt{\faktor{Y}{n}}}}
 \]
 como distribución \textbf{t-Student} con $n$ grados de libertad.
 
@@ -25,4 +25,11 @@ La \textbf{varianza} es:
     V\left[ X \right] = \frac{n}{n-2}
 \]
 
+\subsection{Teorema de Student}
+Sea $X \sim N\left( \mu, \sigma \right)$ y tomamos una $\mas\left( n \right)$ de la variable aleatoria. 
+Entonces:
+\[
+\boxed{\sqrt{n}\frac{\overline{X} - \mu}{S} \sim t_{n-1}}
+\]
+o lo que es lo mismo: $\sqrt{n-1} \frac{\overline{X} - \mu}{\sqrt{b_2}} \sim t_{n-1}$.
 %\subsection{Otras características de interés}

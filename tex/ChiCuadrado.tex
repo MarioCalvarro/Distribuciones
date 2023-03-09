@@ -37,11 +37,30 @@ La función característica de la distribución es:
 \varphi\left( t \right) = \left( 1 - 2it \right)^{-n/2}
 \]
 
+\subsection{Teorema de Fisher-Cochran}
+Sea $X \sim N\left( \mu, \sigma \right)$ y tomemos una $\mas\left( n \right)$ de esta variable. 
+Entonces:
+\begin{enumerate}
+    \item $b_2$ y $\overline{X}$ son independientes.
+    \item Sabemos que:
+    \[
+    \boxed{\overline{X} \sim N\left( \mu, \frac{\sigma}{\sqrt{n}} \right)}
+    \]
+    \item Tenemos que: $\frac{nb_2}{\sigma^2} \sim \chi^2_{n-1}$ ó,
+    \[
+    \boxed{\frac{\left( n-1 \right)S^2}{\sigma^2} \sim \chi^2_{n-1}}
+    \]
+\end{enumerate}
+
 \subsection{Otras características de interés}
 \begin{itemize}
     \item Si tenemos $Y_1 \sim \chi^2_{n_1}$ y $Y_2 \sim \chi^2_{n_2}$. Entonces:
     \[
     Y_1 + Y_2 \sim \chi^2_{n_1 + n_2}
+    \]
+    \item Si tenemos $X \sim \chi^2_n$. Entonces:
+    \[
+    X \sim \gamma\left( \frac{n}{2}, \frac{1}{2} \right)
     \]
     \item Si tenemos $X \sim \chi^2_n$ y tomamos una $\mas\left( k \right)$. Entonces:
     \[

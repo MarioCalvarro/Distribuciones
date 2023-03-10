@@ -1,0 +1,43 @@
+\section{Geométrica}
+\label{sec:geometrica}
+Distribución que mide la probabilidad de que en $x$ experimentos, con posibilidad
+$p$, haya algún ``éxito''.
+\[
+\boxed{G\left( p \right)}
+\]
+
+\subsection{Función de masa}
+La función de masa de la distribución es:
+\[
+p_X \left( x \right) = p \left( 1 - p \right)^{x - 1} 
+\]
+
+\subsection{Función de distribución}
+La función de distribución es:
+\[
+F_X\left( x \right) = \begin{cases}
+    0, &x < 1\\ 
+    1 - \left( 1 - p \right), &x \ge 1
+\end{cases}
+\]
+
+\subsection{Momentos}
+
+\subsubsection*{Respecto del origen}
+La \textbf{esperanza} es: 
+\[
+    E\left[ X \right] = \frac{1}{\theta} 
+\]
+\subsubsection*{Respecto del centro}
+La \textbf{varianza} es:
+\[
+    V\left[ X \right] = \frac{1 - p}{p^2}
+\]
+
+\subsection{Función característica}
+La función característica de la distribución es:
+\[
+\varphi\left( t \right) = \frac{p e^{it}}{1 - \left( 1 - p \right)e^{it}}
+\]
+
+%\subsection{Otras características de interés}
